@@ -248,6 +248,7 @@ $(document).ready(function () {
 const swiperCard = new Swiper(".swiper-content", {
   effect: "cards",
   grabCursor: false,
+  slidesPerView: 1,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,

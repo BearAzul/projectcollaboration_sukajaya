@@ -7,6 +7,20 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 .fs-7 {
   font-size: .9rem;
 }
@@ -25,6 +39,11 @@
 
 .color-primary {
   color: #222 !important;
+}
+
+.bg-primitive-dark {
+  background: #222 !important;
+  color: #F0E3CA !important;
 }
 
 .color-secondary {
@@ -95,15 +114,15 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
 }
 
 .carousel-item {
-  background: url('../../img/home/bg-1.jpg') no-repeat center /cover;
+  background: url('../../img/home/bg-SJ-1.jpg') no-repeat center /cover;
 }
 
 .carousel-item:nth-child(2) {
-  background: url('../../img/home/bg-2.jpg') no-repeat center /cover;
+  background: url('../../img/home/bg-SJ-2.jpg') no-repeat center /cover;
 }
 
 .carousel-item:nth-child(3) {
-  background: url('../../img/home/bg-3.jpg') no-repeat center /cover;
+  background: url('../../img/home/bg-SJ-3.jpg') no-repeat center /cover;
 }
 
 .carousel-item img {
@@ -117,13 +136,44 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, .9) !important;
+  /* background: rgba(0, 0, 0, .8) !important; */
 }
 
 .swiper-content {
   width: 300px;
   height: 320px;
   margin: 0;
+}
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url("../../img/faq/bg-SJ-4.jpg") no-repeat center /cover;
+  background-attachment: fixed;
+}
+
+#about .swiper-content::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  top: -10%;
+  left: -15%;
+  border-top: 10px solid #222;
+  border-left: 10px solid #222;
+}
+
+#about .swiper-content::after {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  bottom: -10%;
+  right: -15%;
+  border-bottom: 10px solid #222;
+  border-right: 10px solid #222;
 }
 
 #about .service .card:hover span {
@@ -173,7 +223,7 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
 }
 
 #testimoni {
-  background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url("../../img/faq/bg-faq.jpeg") no-repeat center /cover;
+  background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url("../../img/faq/bg-SJ-4.jpg") no-repeat center /cover;
   background-attachment: fixed;
   min-height: auto;
   border-radius: 0 100px 0 0;
@@ -207,7 +257,7 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
 }
 
 #faq {
-  background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url("../../img/faq/bg-faq.jpeg") no-repeat center /cover;
+  background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url("../../img/faq/bg-SJ-4.jpg") no-repeat center /cover;
   background-attachment: fixed;
   min-height: auto;
   border-radius: 0 0 0 100px;
@@ -242,10 +292,23 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
   box-shadow: none !important;
 }
 
+/* #contact .contact-loc p::before {
+  content: "\F231";
+  font-family: "Bootstrap-icons";
+  transition: all .3s;
+  margin-right: 5px;
+} */
+
 #contact form input:focus,
 #contact form textarea:focus {
   box-shadow: none;
 }
+
+/* #contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #F0E3CA;
+   opacity: .6; 
+} */
 
 #teams .teams-wrapp {
   width: 100%;
@@ -280,7 +343,7 @@ nav[data-bs-theme="white"] .navbar-nav .nav-item .dropdown-menu i {
 }
 
 footer .list-unstyled li a::before {
-  content: "\F231 ";
+  content: "\F231";
   font-family: "Bootstrap-icons";
   transition: all .3s;
   margin-right: 5px;
@@ -356,6 +419,15 @@ footer .list-unstyled li a:hover:before {
     min-height: auto;
   }
 
+  #about .swiper-content::before {
+    left: -15%;
+  }
+
+  #about .swiper-content::after {
+    bottom: -13%;
+    right: -15%;
+  }
+
   #contact {
     min-height: auto;
   }
@@ -403,6 +475,16 @@ footer .list-unstyled li a:hover:before {
   #home .carousel-control-next,
   #home .carousel-control-prev {
     display: none;
+  }
+
+  #about .swiper-content::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  #about .swiper-content::after {
+    width: 40px;
+    height: 40px;
   }
 
   #about .service>p,
