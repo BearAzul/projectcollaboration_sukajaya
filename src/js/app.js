@@ -228,7 +228,7 @@ $(document).ready(function () {
   });
 
   function sendWhatsAppMessage(message) {
-    let phoneNumber = "6285819030185";
+    let phoneNumber = "6285183315736";
 
     // Format URL untuk pesan WhatsApp
     let whatsappURL =
